@@ -40,9 +40,9 @@ let output = year + "-" + month + "-" + day;
 
 //end
 var query = { date: output };
-app.get("/api/zodiac", function (req, res) {
+app.get("/", function (req, res) {
   zodiac.find(query, function (err, result) {
     console.log(result);
-    res.json(result);
+    res.send(result);
   });
 });
