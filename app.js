@@ -5,10 +5,11 @@ require("dotenv/config");
 const app = express();
 
 //MIDDLEWARES---functions which runs only when a certain page is requested
+var PORT = process.env.PORT;
 //app.use("bodyParser.json()");
 
 //listening to server
-app.listen(3000);
+app.listen(PORT);
 
 //Connection to database
 mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true }, () => {
